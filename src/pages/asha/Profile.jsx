@@ -16,7 +16,7 @@ import { Detail, formatDate } from '@/components/asha/parts';
    simply doesn't pretend otherwise.
    ============================================================= */
 
-const LANGUAGES = ['Hindi', 'English', 'Bengali', 'Marathi', 'Tamil', 'Telugu', 'Gujarati', 'Odia'];
+const LANGUAGES = ['English', 'Hindi'];
 
 export function AshaProfile() {
   const { user, profile, role, signOut, refreshProfile, demoMode, loading, error: authError } =
