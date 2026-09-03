@@ -79,12 +79,18 @@ export function AshaDashboard() {
         'Sorted by how urgent it is, then by how long it has been waiting.',
         'पहले सबसे ज़रूरी, फिर सबसे पुराना।',
       )}
-      action={
-        <Btn as={Link} href="/asha/referrals?new=1" variant="asha">
-          <Plus size={17} aria-hidden="true" />
-          {t('New referral', 'नया रेफरल')}
-        </Btn>
-      }
+     action={
+  <div className="flex flex-wrap gap-2">
+    <Btn as={Link} href="/asha/referrals?new=1" variant="asha">
+      <Plus size={17} aria-hidden="true" />
+      {t('New referral', 'नया रेफरल')}
+    </Btn>
+
+    <Btn as={Link} href="/asha/broadcast" variant="outline">
+      🔔 {t('Send update', 'सूचना भेजें')}
+    </Btn>
+  </div>
+}
     >
       {loading ? (
         <LoadingState label={t('Loading your day', 'आपका दिन लोड हो रहा है')} rows={4} />
